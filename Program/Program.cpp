@@ -1,102 +1,102 @@
 ﻿#include <iostream>
+using namespace std;
 
-char character = 'C';
-
-void OnDamage(float damage = 0.0f)
+namespace Korea
 {
-	std::cout << damage << " 만큼 피해를 입었습니다." << std::endl;
+	float area;
+
+	void Information()
+	{
+		cout << "면적 : " << area << endl;
+	}
 }
 
-// 기본 매개 변수를 지정하기 위해서는 오른쪽에서 부터 지정해주어야 합니다.
-// float x = 20, float y, float z = 30 또한 실행이 안된다.
-void Coordinate(float x, float y, float z = 30)
+namespace Australia
 {
-	std::cout << "x의 값 : " << x << std::endl;
-	std::cout << "y의 값 : " << y << std::endl;
-	std::cout << "z의 값 : " << z << std::endl;
+	float area;
+
+	void Information()
+	{
+		cout << "면적 : " << area << endl;
+	}
 }
+
+using namespace Korea;
+
+class Object
+{
+#pragma region 접근 지정자
+	// 클래스 내부의 포함되어 있는  속성에 접근 범위를 
+	// 제한하는 지정자입니다.
+
+	// public : 클래스 내부와 자기가 상속하고 있는 클래스 그리고 클래스
+	//			외부에서 접근을  허용하는 접근 지정자입니다.
+
+	// protected : 클래스 내부와 자기가 상속하고 있는 클래스에서만
+	//			   접근을 허용하는 접근 지정자입니다.
+
+	// private : 클래스 내부에서만 접근을 허용하는 접근 지정자입니다.
+#pragma endregion
+
+public:
+	int x;
+
+	int X()
+	{
+		return x;
+	}
+
+protected:
+	int y;
+private:
+	int z;
+};
 
 int main()
 {
-#pragma region 스트림
-	//	// 시간의 흐름에 따라 연속적으로 발생하는 데이터의 흐름입니다.
+#pragma region 이름 공간
+	// 속성을 구분할 수 있도록 유효 범위를 설정하는 영역입니다.
+
+	//	area = 1000;
+	//	Information();
 	//	
-	//	std::cout << "Hello World" << std::endl;
-	//	
-	//	int data = 0;
-	//	
-	//	std::cout << "data 변수의 값 입력 : ";
-	//	
-	//	std::cin >> data;
-	//	
-	//	std::cout << "data 변수의 값 : " << data << std::endl;
-	//	
-	//	// 스트림은 운영체제에 의해 생성되며, 스트림 자체에 버퍼라는
-	//	// 임시 메모리 공간이 존재합니다.
+	//	Australia::area = 9999;
+	//	Australia::Information();
+
+	// 이름 공간은 같은 이름의 함수나 변수를 또 다른 공간에 선언하여
+	// 중복되지 않도록 선언할 수 있습니다.
 
 #pragma endregion
 
-#pragma region 동적 할당
-	// 프로그램을 실행중에 필요한 만큼 메모리를 
-	// 할당하는 작업입니다.
+#pragma region 클래스
+	// 사용자 정의 데이터 유형으로 속성과 함수가 포함되어
+	// 있으며, 클래스를 통해 객체를 생성하고 접근하고 사용
+	// 할수 있는 집합체입니다.
 
-	//	int* ptr = new int;
-	//	
-	//	
-	//	*ptr = 9999;
-	//	
-	//	std::cout << "ptr이 가리키고 있는 메모리 값 :" << *ptr << std::endl;
-	//	
-	//	std::cout << "ptr이 가리키고 있는 메모리 주소 : " << ptr << std::endl;
-	//	
-	//	delete ptr;
-	//	
-	//	
-	//	int* dynamicArray = new int[3];
-	//	
-	//	dynamicArray[0] = 10;
-	//	dynamicArray[1] = 20;
-	//	dynamicArray[2] = 30;
-	//	
-	//	for (int i = 0; i < 3; i++)
-	//	{
-	//		std::cout << "dynamicArray[" << i << "]" << " : " << dynamicArray[i] << std::endl;
-	//	
-	//	}
-	//	delete[] dynamicArray;
+	// Object object; 
+	// object.x = 10;
+	// 
+	// 
+	// cout << "Object의 크기 : "<< sizeof(Object) << endl;
+	// cout << "Object.x의 크기 : " << object.x << endl;
+	// 
+	// Object oneObject;
+	// Object twoObject;
+	// Object threeObject;
+	// oneObject.x = 5;
+	// twoObject.x = 25;
+	// threeObject.x = 10;
+	// cout << "oneObject.x의 값 : " << oneObject.X() << endl;
+	// cout << "twoObject.x의 값 : " << twoObject.X() << endl;
+	// cout << "threeObject.x의 값 : " << threeObject.X() << endl;
 
-	// 앞의 포인터는 STACK구역에 뒤에 new int는 동적할당으로 HEAP에 존재
-	// HEAP에 있는 메모리 공간을 사용하기 위해 포인터로 
-	// 동적할당의 주소를 가리킨다. (나의 정리)
 
+
+	// 클래스의 경우 클래스 내부에 있는 변수는 클래스의 
+	// 메모리 영역에 포함되지만, 정적 변수와 함수의 메모리는 
+	// 클래스 영역에 포함되지 않습니다.
 #pragma endregion
 
-#pragma region 기본 매개 변수
-	// 함수를 선언 및 정의할 때 사용자가 미리 기본값을
-	// 지정한 매개변수입니다.
 
-	// OnDamage();
-	// OnDamage(99);
-	// Coordinate(10, 20);
-	// Coordinate(5, 10, 15);
-
-#pragma endregion
-
-#pragma region 범위 지정 연산자
-	// 여러 범위에서 사용되는 식별자를 구분하는데 사용되는 연산자입니다.
-
-	//	char character = 'A';
-	//	
-	//	std::cout << "지역  변수 character 변수의 값 : " << character << std::endl;
-	//	
-	//	// 범위 지정 연산자는 전역변수와 같은 이름의 지역 변수가 선언되었을
-	//	// 때 가장가까운 범위에 선언된 변수의 이름을 사용하는 범위 규칙이
-	//	// 존재하기 때문에 전역변수가 호출되지 않습니다.
-	//	
-	//	std::cout << "전역  변수 character 변수의 값 : " << ::character << std::endl;
-
-	// 범위 지정 연산자를 사용하게 되면 전역 변수의 범위를 지정하게 되므로
-	 // 전역 변수에 접근할 수 있습니다.
-#pragma endregion
-
+	return 0;
 }
