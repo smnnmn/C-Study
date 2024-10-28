@@ -1,2 +1,12 @@
-﻿  Program.cpp
+﻿  Computer.cpp
+C:\Users\test1\Desktop\C-Study\Program\Computer.h(3,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+  (소스 파일 'Computer.cpp'을(를) 컴파일하는 중)
+  
+  KeyBoard.cpp
+  Mouse.cpp
+  Program.cpp
+C:\Users\test1\Desktop\C-Study\Program\Computer.h(3,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+  (소스 파일 'Program.cpp'을(를) 컴파일하는 중)
+  
+  코드를 생성하고 있습니다...
   Program.vcxproj -> C:\Users\test1\Desktop\C-Study\Program\x64\Debug\Program.exe
