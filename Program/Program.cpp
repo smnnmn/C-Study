@@ -22,6 +22,27 @@ public:
 	// int X() const {return x;}; 는 값을 복사하기에 메모리 아쉬움(정리)
 	int & X()  { return x; };
 	int & Y()  { return y; };
+
+	Vector2 & operator + (const Vector2 & clone) // const는 읽기전용으로 사용(정리)
+	{
+		Vector2 tempVec(this->x + clone.x , this->y + clone.y);
+
+		return tempVec;
+	}
+
+	Vector2 & operator ++()
+	{
+		this->x++;
+		this->y++;
+		return *this;
+	}
+	Vector2& operator ++ (int value)
+	{
+		Vector2  clone(this->x, this->y);
+		this->x++;
+		this->y++;
+		return clone;
+	}
 };
 
 int main()
@@ -44,6 +65,13 @@ int main()
 #pragma region 연산자 오버로딩
 	Vector2 vector1(1, 1);
 	Vector2 vector2(3, 3);
+
+	Vector2 position = vector1 + vector2;
+
+	cout << ++position.X() << endl;
+
+	cout << "position x의 값 : " << position.X()<< endl;
+	cout << "position y의 값 : " << position.Y() << endl;
 
 	// Vector2 position = vector1 + vector2;
 
