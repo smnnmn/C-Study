@@ -127,15 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Computer.cpp" />
-    <ClCompile Include="KeyBoard.cpp" />
-    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Program.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Computer.h" />
-    <ClInclude Include="KeyBoard.h" />
-    <ClInclude Include="Mouse.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
