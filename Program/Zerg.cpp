@@ -6,7 +6,22 @@ Zerg::Zerg()
 
 }
 
+void Zerg::Recovery()
+{
+	health = initializeHealth;
+}
+
+void Zerg::OnDamage(int damage)
+{
+	health -= damage;
+}
+
+int Zerg::Health()
+{
+	return health;
+}
+
 Zerg::~Zerg()
 {
-	cout << "Create Zerg" << endl;
+	cout << "Release Zerg" << endl;
 }

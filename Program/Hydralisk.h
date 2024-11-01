@@ -5,7 +5,7 @@ class Hydralisk : public Zerg
 public: 
 	Hydralisk();
 
-	void Recovery();
+	void Recovery() override;
 
 	~Hydralisk();
 };

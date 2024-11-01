@@ -12,7 +12,8 @@ void Hydralisk::Recovery()
 	health = initializeHealth;
 }
 
+
 Hydralisk::~Hydralisk()
 {
-	cout << "Create Hydralisk" << endl;
+	cout << "Release Hydralisk" << endl;
 }

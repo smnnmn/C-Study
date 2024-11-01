@@ -5,7 +5,7 @@ class Zergling : public Zerg
 public:
 	Zergling();
 
-	void Recovery();
+	void Recovery() override;
 
 	~Zergling();
 };

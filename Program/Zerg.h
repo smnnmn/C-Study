@@ -11,7 +11,11 @@ protected:
 public:
 	Zerg();
 
-	virtual void Recovery() = 0;
+	virtual void Recovery();
+
+	void OnDamage(int damage);
+
+	int Health();
 
 	~Zerg();
 };
