@@ -2,6 +2,7 @@
 #include <vector>
 #include <list>
 #include <string>
+#include <deque>
 
 using namespace std;
 
@@ -92,6 +93,28 @@ int main()
 	// 
 	// // compare는 존재의 유무를 1,-1로 알려줌
 	// cout << name.compare("for") << endl;
+
+#pragma endregion
+
+#pragma region Deque 컨테이너
+	//	
+	//	// 앞에서 채우기 가능(정리)
+	//	
+	//	std::deque<int> deque;
+	//	
+	//	deque.push_back(15); // [15]
+	//	deque.push_back(20); // [15][20]
+	//	deque.push_back(1);  // [15][20][1]
+	//	
+	//	deque.push_front(10);// [10][15][20][1]
+	//	deque.push_front(5); // [5] [10][15][20][1]
+	//	deque.push_front(50);// [50][5][10][15][20][1]
+	//	
+	//	for (int i = 0; i < deque.size(); i++)
+	//	{
+	//		cout << deque[i] << endl;
+	//	}
+
 
 #pragma endregion
 
